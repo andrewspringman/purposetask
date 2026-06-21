@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PurposeTask — Revised Landing Page (Andrew Springman)</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg: #0d1117;
+      --surface: #161b22;
+      --border: #30363d;
+      --text: #e6edf3;
+      --muted: #8b949e;
+      --accent: #2ea043;
+      --accent-light: #3fb950;
+      --blue: #388bfd;
+      --radius: 8px;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+      line-height: 1.6;
+    }
+
+    /* ── Revision banner ── */
+    .revision-banner {
+      background: #1c2128;
+      border-bottom: 2px solid #e3b341;
+      padding: 10px 24px;
+      font-size: 13px;
+      color: #e3b341;
+      text-align: center;
+    }
+
+    /* ── Nav ── */
+    nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 16px 48px;
+      border-bottom: 1px solid var(--border);
+      background: var(--surface);
+    }
+
+    .nav-logo { font-weight: 700; font-size: 18px; letter-spacing: -0.3px; }
+    .nav-logo span { color: var(--accent-light); }
+
+    .nav-cta {
+      background: var(--accent);
+      color: #fff;
+      border: none;
+      padding: 8px 20px;
+      border-radius: var(--radius);
+      font-size: 14px;
+      font-weight: 600;
+      cursor: pointer;
+      text-decoration: none;
+    }
+
+    /* ── Hero ── */
+    .hero {
+      text-align: center;
+      padding: 80px 24px 64px;
+      max-width: 760px;
+      margin: 0 auto;
+    }
+
+    .hero-eyebrow {
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1.2px;
+      color: var(--accent-light);
+      margin-bottom: 20px;
+    }
+
+    .hero h1 {
+      font-size: clamp(28px, 5vw, 48px);
+      font-weight: 700;
+      line-height: 1.2;
+      letter-spacing: -0.5px;
+      margin-bottom: 24px;
+    }
+
+    .hero h1 em {
+      font-style: normal;
+      color: var(--accent-light);
+    }
+
+    .hero-sub {
+      font-size: clamp(17px, 2.5vw, 20px);
+      color: var(--muted);
+      margin-bottom: 36px;
+      max-width: 560px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .hero-cta-row {
+      display: flex;
+      gap: 12px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .btn-primary {
+      background: var(--accent);
+      color: #fff;
+      border: none;
+      padding: 12px 28px;
+      border-radius: var(--radius);
+      font-size: 16px;
+      font-weight: 600;
+      cursor: pointer;
+      text-decoration: none;
+    }
+
+    .btn-secondary {
+      background: transparent;
+      color: var(--text);
+      border: 1px solid var(--border);
+      padding: 12px 28px;
+      border-radius: var(--radius);
+      font-size: 16px;
+      font-weight: 600;
+      cursor: pointer;
+      text-decoration: none;
+    }
+
+    /* ── Divider stat ── */
+    .stat-bar {
+      background: var(--surface);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      justify-content: center;
+      gap: 64px;
+      padding: 28px 24px;
+      flex-wrap: wrap;
+    }
+
+    .stat { text-align: center; }
+    .stat-value { font-size: 26px; font-weight: 700; color: var(--accent-light); }
+    .stat-label { font-size: 13px; color: var(--muted); margin-top: 4px; }
+
+    /* ── Personas ── */
+    .personas {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 72px 24px;
+    }
+
+    .personas-heading {
+      text-align: center;
+      font-size: clamp(22px, 3vw, 32px);
+      font-weight: 700;
+      margin-bottom: 56px;
+    }
+
+    .persona-card {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 48px;
+      align-items: center;
+      margin-bottom: 72px;
+      padding-bottom: 72px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .persona-card.reverse { direction: rtl; }
+    .persona-card.reverse > * { direction: ltr; }
+    .persona-card:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+
+    @media (max-width: 680px) {
+      .persona-card, .persona-card.reverse { grid-template-columns: 1fr; direction: ltr; }
+    }
+
+    /* ── Screenshot placeholder ── */
+    .screenshot-placeholder {
+      background: var(--surface);
+      border: 2px dashed var(--border);
+      border-radius: 12px;
+      aspect-ratio: 16/9;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      color: var(--muted);
+      font-size: 14px;
+      text-align: center;
+      padding: 24px;
+    }
+
+    .screenshot-placeholder .ph-icon { font-size: 32px; }
+    .screenshot-placeholder .ph-label { font-weight: 600; color: var(--text); }
+    .screenshot-placeholder .ph-note { font-size: 12px; }
+
+    /* ── Persona text ── */
+    .persona-role {
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--accent-light);
+      margin-bottom: 10px;
+    }
+
+    .persona-name {
+      font-size: clamp(22px, 3vw, 30px);
+      font-weight: 700;
+      margin-bottom: 14px;
+    }
+
+    .persona-pull {
+      font-size: clamp(16px, 2vw, 19px);
+      color: var(--muted);
+      font-style: italic;
+      margin-bottom: 18px;
+      line-height: 1.5;
+    }
+
+    .persona-body {
+      font-size: 15px;
+      color: var(--text);
+      line-height: 1.7;
+      margin-bottom: 16px;
+    }
+
+    .persona-tag {
+      display: inline-block;
+      background: rgba(46,160,67,.12);
+      color: var(--accent-light);
+      border: 1px solid rgba(46,160,67,.3);
+      border-radius: 20px;
+      padding: 4px 14px;
+      font-size: 13px;
+      font-weight: 600;
+    }
+
+    /* ── Proof bar ── */
+    .proof-bar {
+      background: var(--surface);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      text-align: center;
+      padding: 48px 24px;
+    }
+
+    .proof-bar h2 {
+      font-size: clamp(20px, 3vw, 28px);
+      font-weight: 700;
+      margin-bottom: 12px;
+    }
+
+    .proof-steps {
+      display: flex;
+      justify-content: center;
+      gap: 0;
+      flex-wrap: wrap;
+      margin-top: 32px;
+    }
+
+    .proof-step {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 15px;
+      font-weight: 600;
+    }
+
+    .proof-step .check { color: var(--accent-light); font-size: 20px; }
+
+    .proof-arrow {
+      color: var(--muted);
+      margin: 0 16px;
+      font-size: 18px;
+    }
+
+    @media (max-width: 560px) { .proof-arrow { display: none; } .proof-step { margin: 8px 0; } }
+
+    /* ── CTA ── */
+    .cta-section {
+      max-width: 600px;
+      margin: 0 auto;
+      text-align: center;
+      padding: 72px 24px;
+    }
+
+    .cta-section h2 { font-size: clamp(22px, 3vw, 32px); font-weight: 700; margin-bottom: 14px; }
+    .cta-section p { color: var(--muted); margin-bottom: 32px; font-size: 16px; }
+
+    .cta-form { display: flex; flex-direction: column; gap: 12px; text-align: left; }
+
+    .cta-form input, .cta-form textarea {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 12px 14px;
+      color: var(--text);
+      font-size: 15px;
+      font-family: inherit;
+      width: 100%;
+    }
+
+    .cta-form textarea { min-height: 100px; resize: vertical; }
+    .cta-form input:focus, .cta-form textarea:focus { outline: 2px solid var(--accent); border-color: transparent; }
+
+    /* ── Footer ── */
+    footer {
+      border-top: 1px solid var(--border);
+      text-align: center;
+      padding: 28px 24px;
+      font-size: 13px;
+      color: var(--muted);
+    }
+
+    /* ── Revision notes ── */
+    .revision-note {
+      background: #1c2128;
+      border-left: 3px solid #e3b341;
+      padding: 8px 12px;
+      margin: 12px 0;
+      font-size: 12px;
+      color: #e3b341;
+      border-radius: 0 4px 4px 0;
+    }
+  </style>
+</head>
+<body>
+
+<div class="revision-banner">
+  ✏️ Suggested revision by Andrew Springman — for Garrett Axler's review. Placeholder images mark where video screen captures should go.
+</div>
+
+<nav>
+  <div class="nav-logo">Purpose<span>Task</span></div>
+  <a href="#get-in-touch" class="nav-cta">Get in touch</a>
+</nav>
+
+<!-- ── HERO ── -->
+<section class="hero">
+  <div class="hero-eyebrow">Civic infrastructure for communities that care</div>
+
+  <h1>
+    In every town, there is work that isn't getting done.<br>
+    Not because no one cares —<br>
+    but because <em>the people, the money, and the need</em><br>
+    have never shared the same system.
+  </h1>
+
+  <p class="hero-sub">
+    PurposeTask brings them together — connecting displaced workers, nonprofits, and mission-driven donors to verified community outcomes.
+  </p>
+
+  <div class="hero-cta-row">
+    <a href="#get-in-touch" class="btn-primary">Get in touch</a>
+    <a href="#how-it-works" class="btn-secondary">See how it works</a>
+  </div>
+
+  <div class="revision-note">
+    Original headline: "Where capacity finds purpose, and purpose finds momentum." — The video's opening line is dramatically stronger. It tells a story and frames with hope instead of leading with function. Using it here creates an immediate connection between what visitors read and what they see in the video.
+  </div>
+</section>
+
+<!-- ── STAT BAR ── -->
+<div class="stat-bar">
+  <div class="stat">
+    <div class="stat-value">Task completed.</div>
+    <div class="stat-label">Verified by the nonprofit</div>
+  </div>
+  <div class="stat">
+    <div class="stat-value">Worker paid.</div>
+    <div class="stat-label">Same day</div>
+  </div>
+  <div class="stat">
+    <div class="stat-value">Dollars accounted for.</div>
+    <div class="stat-label">Full donor visibility</div>
+  </div>
+</div>
+
+<!-- ── PERSONAS ── -->
+<section class="personas" id="how-it-works">
+
+  <h2 class="personas-heading">Three people. One system. Real outcomes.</h2>
+
+  <!-- Marcus -->
+  <div class="persona-card">
+    <div class="screenshot-placeholder">
+      <div class="ph-icon">🎬</div>
+      <div class="ph-label">Screen capture: Marcus</div>
+      <div class="ph-note">From the teaser video — the moment Marcus is matched to a task.<br>Suggested: his face, or the screen showing his match notification.</div>
+    </div>
+    <div class="persona-text">
+      <div class="persona-role">Tasker</div>
+      <div class="persona-name">Marcus</div>
+      <div class="persona-pull">"I have skills. I have time. I want to do something that matters — and I need it to pay."</div>
+      <p class="persona-body">
+        Marcus has capacity the community needs, but no clear way to connect it to work that's waiting. PurposeTask matches him to skills-based tasks, gets him paid the same day, and makes his contribution verifiable — so his work counts for something beyond the paycheck.
+      </p>
+      <span class="persona-tag">Skills-matched · Same-day pay · Community impact</span>
+    </div>
+  </div>
+
+  <!-- Nonprofit leader -->
+  <div class="persona-card reverse">
+    <div class="screenshot-placeholder">
+      <div class="ph-icon">🎬</div>
+      <div class="ph-label">Screen capture: [Lisa] — nonprofit leader</div>
+      <div class="ph-note">From the teaser video — she should be named in the video too.<br>Suggested: her face during the section describing nonprofits.</div>
+    </div>
+    <div class="persona-text">
+      <div class="persona-role">Architect</div>
+      <div class="persona-name">[Name her — she deserves it]</div>
+      <div class="persona-pull">"I know exactly what needs doing. I just never have enough hands."</div>
+      <p class="persona-body">
+        She runs a nonprofit that defines real community needs every day. PurposeTask gives her a way to scope that work clearly, match it to the right people, and verify completion — so funders can see exactly what their dollars did.
+      </p>
+      <span class="persona-tag">Scoped tasks · Verified outcomes · Donor-ready</span>
+      <div class="revision-note">
+        She is unnamed in the video. Names build story. Story builds empathy. Give her a name and let her voice drive this section.
+      </div>
+    </div>
+  </div>
+
+  <!-- Donor -->
+  <div class="persona-card">
+    <div class="screenshot-placeholder">
+      <div class="ph-icon">🎬</div>
+      <div class="ph-label">Screen capture: [James] — donor reviewing results</div>
+      <div class="ph-note">From the teaser video — the donor in his chair, looking at his iPad.<br>A screenshot here connects what visitors read to what they just watched.</div>
+    </div>
+    <div class="persona-text">
+      <div class="persona-role">Sustainer</div>
+      <div class="persona-name">[Name him too]</div>
+      <div class="persona-pull">"I want my dollars to do real work — and I want to see proof."</div>
+      <p class="persona-body">
+        He's mission-driven and tired of writing checks into a void. PurposeTask routes his giving to specific, verified tasks — and brings him back a receipt that shows exactly who did what, and what it cost. Full visibility into every dollar.
+      </p>
+      <span class="persona-tag">Verified outcomes · Full fund visibility · Mission-aligned</span>
+      <div class="revision-note">
+        He's the most compelling character in the video — calm, satisfied, holding the iPad. A screen capture of that moment here would land the message before a visitor even reads the copy.
+      </div>
+    </div>
+  </div>
+
+</section>
+
+<!-- ── PROOF BAR ── -->
+<div class="proof-bar">
+  <h2>The system works when all three are in the room.</h2>
+  <p style="color:var(--muted); margin-top:8px; font-size:16px;">That's what PurposeTask is building.</p>
+  <div class="proof-steps" style="margin-top: 32px;">
+    <div class="proof-step"><span class="check">✓</span> Task defined</div>
+    <div class="proof-arrow">→</div>
+    <div class="proof-step"><span class="check">✓</span> Worker matched</div>
+    <div class="proof-arrow">→</div>
+    <div class="proof-step"><span class="check">✓</span> Work completed</div>
+    <div class="proof-arrow">→</div>
+    <div class="proof-step"><span class="check">✓</span> Worker paid same day</div>
+    <div class="proof-arrow">→</div>
+    <div class="proof-step"><span class="check">✓</span> Donor sees the proof</div>
+  </div>
+</div>
+
+<!-- ── CTA ── -->
+<section class="cta-section" id="get-in-touch">
+  <h2>We're building this now.</h2>
+  <p>PurposeTask is a North Carolina nonprofit (501(c)(3) pending). We're not accepting donations yet — but we'd love to hear from you.</p>
+  <form class="cta-form">
+    <input type="text" placeholder="Name">
+    <input type="email" placeholder="Email">
+    <input type="text" placeholder="Organization (optional)">
+    <textarea placeholder="Message"></textarea>
+    <button type="submit" class="btn-primary">Get in touch</button>
+  </form>
+</section>
+
+<footer>
+  © 2026 PurposeTask™ · Organized as a North Carolina nonprofit · 501(c)(3) status pending · Not accepting donations at this time
+</footer>
+
+</body>
+</html>
