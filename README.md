@@ -1,2 +1,2 @@
 # purposetask
-Moch Website and note for Garrett
+Moch Website and notes for Garrett
