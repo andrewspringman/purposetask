@@ -26,16 +26,6 @@
       line-height: 1.6;
     }
 
-    /* ── Revision banner ── */
-    .revision-banner {
-      background: #1c2128;
-      border-bottom: 2px solid #e3b341;
-      padding: 10px 24px;
-      font-size: 13px;
-      color: #e3b341;
-      text-align: center;
-    }
-
     /* ── Nav ── */
     nav {
       display: flex;
@@ -231,6 +221,10 @@
     .persona-name {
       font-size: clamp(22px, 3vw, 30px);
       font-weight: 700;
+      margin-bottom: 4px;
+    }
+
+    .persona-role {
       margin-bottom: 14px;
     }
 
@@ -337,39 +331,19 @@
       color: var(--muted);
     }
 
-    /* ── Revision notes ── */
-    .revision-note {
-      background: #1c2128;
-      border-left: 3px solid #e3b341;
-      padding: 8px 12px;
-      margin: 12px 0;
-      font-size: 12px;
-      color: #e3b341;
-      border-radius: 0 4px 4px 0;
-    }
   </style>
 </head>
 <body>
 
-<div class="revision-banner">
-  ✏️ Suggested revision by Andrew Springman — for Garrett Astler's review.
-</div>
-
 <nav>
   <div class="nav-logo">Purpose<span>Task</span></div>
-  <a href="#get-in-touch" class="nav-cta">Get in touch</a>
 </nav>
 
 <!-- ── HERO ── -->
 <section class="hero">
   <div class="hero-eyebrow">Civic infrastructure for communities that care</div>
 
-  <h1>
-    In every town, there is work that isn't getting done.<br>
-    Not because no one cares —<br>
-    but because <em>the people, the money, and the need</em><br>
-    have never shared the same system.
-  </h1>
+  <h1>The people, the need, and the funding — <em>together.</em></h1>
 
   <p class="hero-sub">
     PurposeTask brings them together — connecting motivated workers, nonprofits, and mission-driven donors to verified community outcomes.
@@ -378,10 +352,6 @@
   <div class="hero-cta-row">
     <a href="#get-in-touch" class="btn-primary">Get in touch</a>
     <a href="#how-it-works" class="btn-secondary">See how it works</a>
-  </div>
-
-  <div class="revision-note">
-    Original headline: "Where capacity finds purpose, and purpose finds momentum." — The video's opening line is dramatically stronger. It tells a story and frames with hope instead of leading with function. Using it here creates an immediate connection between what visitors read and what they see in the video.
   </div>
 </section>
 
@@ -411,8 +381,8 @@
     <img src="images/marcus-app.png" alt="The PurposeTask Task Map — Marcus finds nearby work on his phone" class="screenshot-img">
     <div class="persona-text">
       <img src="images/marcus.png" alt="Marcus" class="persona-portrait">
-      <div class="persona-role">Tasker</div>
       <div class="persona-name">Marcus</div>
+      <div class="persona-role">Tasker</div>
       <div class="persona-pull">"I have skills. I have time. I want to do something that matters — and I need it to pay."</div>
       <p class="persona-body">
         Marcus has capacity the community needs, but no clear way to connect it to work that's waiting. PurposeTask matches him to skills-based tasks, gets him paid the same day, and makes his contribution verifiable — so his work counts for something beyond the paycheck.
@@ -426,36 +396,28 @@
     <img src="images/becca-taskboard.png" alt="Becca's task board — the PurposeTask dashboard showing scoped nonprofit work" class="screenshot-img">
     <div class="persona-text">
       <img src="images/becca.png" alt="Becca" class="persona-portrait">
+      <div class="persona-name">Becca</div>
       <div class="persona-role">Architect</div>
-      <div class="persona-name">Becca <span style="font-weight:400; color:var(--muted); font-size:18px;">— [give her a last name too]</span></div>
       <div class="persona-pull">"I know exactly what needs doing. I just never have enough hands."</div>
       <p class="persona-body">
         She runs a nonprofit that defines real community needs every day. PurposeTask gives her a way to scope that work clearly, match it to the right people, and verify completion — so funders can see exactly what their dollars did.
       </p>
       <span class="persona-tag">Scoped tasks · Verified outcomes · Donor-ready</span>
-      <div class="revision-note">
-        She is unnamed in the video. Names build story. Story builds empathy. Give her a name and let her voice drive this section.
-      </div>
     </div>
   </div>
 
   <!-- Donor -->
   <div class="persona-card">
-    <div>
-      <img src="images/robert.png" alt="Robert — a mission-driven donor who wants to see proof" class="screenshot-img" style="margin-bottom:16px;">
-      <img src="images/robert-report.png" alt="Robert's electronic report — verified task completions and payments on his iPad" class="screenshot-img">
-    </div>
+    <img src="images/robert-report.png" alt="Robert's electronic report — verified task completions and payments on his iPad" class="screenshot-img">
     <div class="persona-text">
+      <img src="images/robert.png" alt="Robert" class="persona-portrait">
+      <div class="persona-name">Robert</div>
       <div class="persona-role">Sustainer</div>
-      <div class="persona-name">Robert <span style="font-weight:400; color:var(--muted); font-size:18px;">— [give him a last name too]</span></div>
       <div class="persona-pull">"I want my dollars to do real work — and I want to see proof."</div>
       <p class="persona-body">
         He's mission-driven and tired of writing checks into a void. PurposeTask routes his giving to specific, verified tasks — and brings him back a receipt that shows exactly who did what, and what it cost. Full visibility into every dollar.
       </p>
       <span class="persona-tag">Verified outcomes · Full fund visibility · Mission-aligned</span>
-      <div class="revision-note">
-        He's the most compelling character in the video — calm, satisfied, holding the iPad. A screen capture of that moment here would land the message before a visitor even reads the copy.
-      </div>
     </div>
   </div>
 
@@ -492,7 +454,7 @@
 </section>
 
 <footer>
-  © 2026 PurposeTask™ · Organized as a North Carolina nonprofit · 501(c)(3) status pending · Not accepting donations at this time
+  PurposeTask is organized as a North Carolina nonprofit corporation. Federal 501(c)(3) tax-exempt status is pending. This site does not solicit funds, accept donations, or create any financial obligation.
 </footer>
 
 </body>
