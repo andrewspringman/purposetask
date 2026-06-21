@@ -200,6 +200,24 @@
     .screenshot-placeholder .ph-label { font-weight: 600; color: var(--text); }
     .screenshot-placeholder .ph-note { font-size: 12px; }
 
+    /* ── Real screenshots ── */
+    .screenshot-img {
+      width: 100%;
+      border-radius: 12px;
+      display: block;
+      object-fit: cover;
+    }
+
+    /* ── Portrait ── */
+    .persona-portrait {
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 14px;
+      border: 2px solid var(--border);
+    }
+
     /* ── Persona text ── */
     .persona-role {
       font-size: 11px;
@@ -334,7 +352,7 @@
 <body>
 
 <div class="revision-banner">
-  ✏️ Suggested revision by Andrew Springman — for Garrett Axler's review. Placeholder images mark where video screen captures should go.
+  ✏️ Suggested revision by Andrew Springman — for Garrett Axler's review. One screen capture still needed: Robert's electronic report (iPad scene).
 </div>
 
 <nav>
@@ -390,12 +408,9 @@
 
   <!-- Marcus -->
   <div class="persona-card">
-    <div class="screenshot-placeholder">
-      <div class="ph-icon">🎬</div>
-      <div class="ph-label">Screen capture: Marcus</div>
-      <div class="ph-note">From the teaser video — the moment Marcus is matched to a task.<br>Suggested: his face, or the screen showing his match notification.</div>
-    </div>
+    <img src="images/marcus-app.png" alt="The PurposeTask Task Map — Marcus finds nearby work on his phone" class="screenshot-img">
     <div class="persona-text">
+      <img src="images/marcus.png" alt="Marcus" class="persona-portrait">
       <div class="persona-role">Tasker</div>
       <div class="persona-name">Marcus</div>
       <div class="persona-pull">"I have skills. I have time. I want to do something that matters — and I need it to pay."</div>
@@ -408,14 +423,11 @@
 
   <!-- Nonprofit leader -->
   <div class="persona-card reverse">
-    <div class="screenshot-placeholder">
-      <div class="ph-icon">🎬</div>
-      <div class="ph-label">Screen capture: [Lisa] — nonprofit leader</div>
-      <div class="ph-note">From the teaser video — she should be named in the video too.<br>Suggested: her face during the section describing nonprofits.</div>
-    </div>
+    <img src="images/becca-taskboard.png" alt="Becca's task board — the PurposeTask dashboard showing scoped nonprofit work" class="screenshot-img">
     <div class="persona-text">
+      <img src="images/becca.png" alt="Becca" class="persona-portrait">
       <div class="persona-role">Architect</div>
-      <div class="persona-name">[Name her — she deserves it]</div>
+      <div class="persona-name">Becca <span style="font-weight:400; color:var(--muted); font-size:18px;">— [give her a last name too]</span></div>
       <div class="persona-pull">"I know exactly what needs doing. I just never have enough hands."</div>
       <p class="persona-body">
         She runs a nonprofit that defines real community needs every day. PurposeTask gives her a way to scope that work clearly, match it to the right people, and verify completion — so funders can see exactly what their dollars did.
@@ -429,14 +441,17 @@
 
   <!-- Donor -->
   <div class="persona-card">
-    <div class="screenshot-placeholder">
-      <div class="ph-icon">🎬</div>
-      <div class="ph-label">Screen capture: [James] — donor reviewing results</div>
-      <div class="ph-note">From the teaser video — the donor in his chair, looking at his iPad.<br>A screenshot here connects what visitors read to what they just watched.</div>
+    <div>
+      <img src="images/robert.png" alt="Robert — a mission-driven donor who wants to see proof" class="screenshot-img" style="margin-bottom:16px;">
+      <div class="screenshot-placeholder" style="aspect-ratio: 16/9;">
+        <div class="ph-icon">🎬</div>
+        <div class="ph-label">Screen capture: Robert's electronic report</div>
+        <div class="ph-note">The iPad scene from the video — the donor receipt showing exactly what his dollars did.</div>
+      </div>
     </div>
     <div class="persona-text">
       <div class="persona-role">Sustainer</div>
-      <div class="persona-name">[Name him too]</div>
+      <div class="persona-name">Robert <span style="font-weight:400; color:var(--muted); font-size:18px;">— [give him a last name too]</span></div>
       <div class="persona-pull">"I want my dollars to do real work — and I want to see proof."</div>
       <p class="persona-body">
         He's mission-driven and tired of writing checks into a void. PurposeTask routes his giving to specific, verified tasks — and brings him back a receipt that shows exactly who did what, and what it cost. Full visibility into every dollar.
