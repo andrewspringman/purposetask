@@ -2,9 +2,9 @@
 
 ## Purpose
 
-This repo contains Andrew Springman's unsolicited website feedback for [PurposeTask](https://purposetask.org), a North Carolina nonprofit connecting displaced workers (Taskers), nonprofits (Architects), and mission-driven donors (Sustainers) to verified community outcomes.
+This repo contains Andrew Springman's unsolicited website feedback for [PurposeTask](https://purposetask.org), a North Carolina nonprofit connecting motivated workers (Taskers), nonprofits (Architects), and mission-driven donors (Sustainers) to verified community outcomes.
 
-The repo was created in response to a LinkedIn message from Garrett Axler (PurposeTask founder) and contains:
+The repo was created in response to a LinkedIn message from Garrett Astler (PurposeTask founder) and contains:
 
 - `index.html` — a revised landing page mockup showing suggested improvements
 - `reply.md` — draft LinkedIn reply to Garrett
@@ -21,7 +21,7 @@ Founder of PurposeTask. Connected with Andrew on LinkedIn. Offered introductions
 
 ### What is PurposeTask?
 A civic infrastructure nonprofit with three user types:
-- **Taskers** — displaced workers who complete skills-based tasks and get paid same-day
+- **Taskers** — motivated workers who complete skills-based tasks and get paid same-day
 - **Architects** — nonprofits who scope and post community work
 - **Sustainers** — mission-driven donors who fund tasks and receive verified proof of impact
 

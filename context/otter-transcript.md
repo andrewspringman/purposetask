@@ -1,7 +1,7 @@
 # Otter Transcript — Andrew's Notes on Garrett's Message
 
 Unknown 0:03
-My new friend Garrett Axler, who I met at the Charlotte Charlotte Startup House
+My new friend Garrett Astler, who I met at the Charlotte Charlotte Startup House
 
 Unknown 0:14
 Jam,
@@ -64,7 +64,7 @@ Unknown 4:13
 and some of the texts that describe Marcus's motivations to be better phrases to be included in the text on the website, then you have the, you have the woman who is not named, by the way, she should be named in the video, who is in charge of the nonprofit or the the charity and you could have a screen capture of her face when you're describing the nonprofits in the text on the website, and again take some phrases from the video and use them to create a connection between the video and the text, and finally the donor sitting in his chair, looking at results on his iPad, a screen cap of him could be included in the in the website again to connect the video with the text.
 
 Unknown 5:19
-Okay, opening framing to compare the website, which says where capacity finds purpose and purpose finds momentum. Purpose task is building civic infrastructure connecting displaced workers, nonprofits, and mission-driven donors to verified community outcomes.
+Okay, opening framing to compare the website, which says where capacity finds purpose and purpose finds momentum. Purpose task is building civic infrastructure connecting motivated workers, nonprofits, and mission-driven donors to verified community outcomes.
 
 Unknown 5:40
 Compare that to the video, which says in every town there is work that isn't getting done, not because no one cares,

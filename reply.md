@@ -1,31 +1,38 @@
-# LinkedIn Reply to Garrett Axler
-
----
-
-Garrett — great to connect, and I appreciated the message. A few things at once:
+# LinkedIn Reply to Garrett Astler
 
 **Website feedback**
 
-I spent time on purposetask.org and watched the video. The work is real and the video communicates it well — but the site doesn't land the same punch the video does. The video opens with: *"In every town, there is work that isn't getting done. Not because no one cares — but because the people, the money, and the need have never shared the same system."* That line belongs on the homepage. The current tagline is abstract; that line is visceral.
+I spent time on purposetask.org and watched the video. The video is compelling — but the site doesn't land the same punch.  The video is better in several ways.  It tells a story.  It frames with opportunity more so than functionality.  It pictures the platform.  The text can include these aspects.  I suggest using phrases and screen caps from the video to bring those aspects and continuity with the video into the text.
 
-I also think the three personas in the video (the tasker, the nonprofit coordinator, the donor) deserve to be named and photographed on the site. Right now they're unnamed, which makes the proof feel generic. If you can get even first names and a single screen capture from the video for each, it would change the emotional weight of the page considerably.
+The video opens with: *"In every town, there is work that isn't getting done. Not because no one cares — but because the people, the money, and the need have never shared the same system."* That idea belongs on the homepage. The current tagline is abstract; that line is visceral.  I suggest an even shorter version, "The people, the need, and the funding...together".
 
-I put together a rough revised landing page mockup in a repo to show what I mean rather than just describe it — reach out if you'd like the link. It's meant as a conversation starter, not a finished design.
+I also think the three personas in the video (the tasker, the nonprofit coordinator, the donor) deserve to be named and photographed on the site. Right now they're unnamed, which makes the proof feel generic. If you can get first names and a single screen capture from the video for each, it would change the emotional weight of the page considerably.  It also provides continuity between the video and the text.
+
+The word displaced, while an important reason behind the project, comes across as negative and overwhelming.  Consider the word motivated.
+
+I put together a rough revised landing page mockup in a repo to show what I mean rather than just describe it — [Mockup](https://andrewspringman.github.io/purposetask). It's meant as a conversation starter, not a finished design.
+
+**Video feedback**
+
+My generation scans transcripts to decide if watching a video is worth our time.  You have a transcript, but the way the video is embedded, I can't click on the YouTube icon to quickly get to the transcript.
+
+Marcus gets a name.  The other two characters are known by function.  Give them names.  Names enhance the story aspect.  Story simulates experience and creates empathy.
 
 **Introductions**
 
-I'd love an intro to both Ken Norton and Andrew Weiler via LinkedIn — that medium works well for me. I know Ken moderately well from our time in the same circles, so feel free to make that one informal. I've only met Andrew once, so whatever framing helps him remember the context would be great.
+I've already written Ken Norton and Andrew Weiler via LinkedIn to expect a contact from you, but it was a while ago now.  I know Ken moderately well and could even arange something in person.  I've only met Andrew once in person (almost 9 years ago), so that intro is best left on LinkedIn, but I can refresh it with another message.  Drew Burdick may know Andrew better than me and Ken definitely does.  So, they could make a more personal intro.
 
 **MeckMIN**
 
-Yes — Mecklenburg Metropolitan Interfaith Network. I've been aware of their work for a while and think there's real alignment there. Curious what angle you see.
+I haven't connected with them.  Curious to hear your impressions.
 
 **FaithTech**
 
-I saw the message about the Matthews meetup but it came through after the date had already passed on my end — sorry I missed it. I'll keep an eye out for the next one.
+I must have missed a meeting.  I try to go every month.  How did it go?
 
 **Getting together**
 
-Evenings and weekends work best for me, or lunch near the main branch of the public library if that's convenient for you. Happy to find a time whenever you're ready.
+Evenings and weekends work best for me, or lunch (11:30) at the Billy Graham Library if that's convenient for you. Evenings are wide open this week.  Happy to find a time whenever you're ready.
 
-— Andrew
+Blessings,
+Andrew

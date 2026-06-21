@@ -1,4 +1,4 @@
-# Garrett Axler — LinkedIn Message
+# Garrett Astler — LinkedIn Message
 
 Hi Andrew, check out my new landing page and teaser video over at www.purposetask.org and let me know what you think
 
