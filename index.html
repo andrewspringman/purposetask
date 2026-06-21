@@ -30,6 +30,9 @@
 
     /* ── Nav ── */
     nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -39,6 +42,51 @@
     }
 
     .nav-logo { font-weight: 700; font-size: 18px; letter-spacing: -0.3px; color: var(--accent); }
+
+    .nav-hamburger {
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 4px;
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+    }
+
+    .nav-hamburger span {
+      display: block;
+      width: 22px;
+      height: 2px;
+      background: var(--text);
+      border-radius: 2px;
+      transition: opacity 0.2s;
+    }
+
+    .nav-menu {
+      display: none;
+      position: absolute;
+      top: 100%;
+      right: 0;
+      left: 0;
+      background: var(--bg);
+      border-bottom: 1px solid var(--border);
+      padding: 8px 0;
+    }
+
+    .nav-menu.open { display: block; }
+
+    .nav-menu a {
+      display: block;
+      padding: 14px 24px;
+      color: var(--text);
+      text-decoration: none;
+      font-size: 16px;
+      font-weight: 500;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .nav-menu a:last-child { border-bottom: none; }
+    .nav-menu a:active { background: var(--border); }
 
     /* ── Hero ── */
     .hero {
@@ -350,8 +398,15 @@
 </head>
 <body>
 
-<nav>
+<nav id="main-nav">
   <div class="nav-logo">PurposeTask</div>
+  <button class="nav-hamburger" id="nav-toggle" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+  <div class="nav-menu" id="nav-menu">
+    <a href="#how-it-works" id="nav-link-how">See how it works</a>
+    <a href="#get-in-touch" id="nav-link-touch">Get in touch</a>
+  </div>
 </nav>
 
 <!-- ── HERO ── -->
@@ -484,5 +539,12 @@
   PurposeTask is organized as a North Carolina nonprofit corporation. Federal 501(c)(3) tax-exempt status is pending. This site does not solicit funds, accept donations, or create any financial obligation.
 </footer>
 
+<script>
+  const toggle = document.getElementById('nav-toggle');
+  const menu = document.getElementById('nav-menu');
+  toggle.addEventListener('click', () => menu.classList.toggle('open'));
+  menu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => menu.classList.remove('open')));
+  document.addEventListener('click', e => { if (!document.getElementById('main-nav').contains(e.target)) menu.classList.remove('open'); });
+</script>
 </body>
 </html>
